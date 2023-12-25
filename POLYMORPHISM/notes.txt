@@ -1,0 +1,91 @@
+Polymorphism is a concept in object-oriented programming that allows objects of different types to be 
+treated as objects of a common base type. There are two main types of 
+polymorphism in C++: compile-time (static) polymorphism and runtime (dynamic) polymorphism.
+
+1. Compile-time (Static) Polymorphism:
+
+a. Function Overloading:
+
+Description: Function overloading allows multiple 
+functions with the same name but different parameter lists.
+
+Example:
+cpp code
+class Calculator {
+public:
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+};
+
+b. Operator Overloading:
+
+Description: Operator overloading allows you to 
+define the behavior of operators for user-defined types.
+
+Example:
+cpp code
+class Complex {
+public:
+    int real;
+    int imag;
+
+    Complex operator+(const Complex& other) {
+        Complex result;
+        result.real = this->real + other.real;
+        result.imag = this->imag + other.imag;
+        return result;
+    }
+};
+
+2. Runtime (Dynamic) Polymorphism:
+
+a.Function overriding (Virtual Functions):
+Description: Function overriding allows a derived class to 
+provide a specific implementation of a function declared in its base class.
+
+Example:
+cpp code
+class Shape {
+public:
+    virtual void draw() {
+        cout << "Drawing a shape." << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {
+        cout << "Drawing a circle." << endl;
+    }
+};
+
+b. Pure Virtual Functions and Abstract Classes:
+
+Description: Pure virtual functions are virtual functions with no 
+implementation in the base class, making the class abstract. 
+Abstract classes cannot be instantiated, and they provide an interface 
+for derived classes to implement.
+
+Example:
+cpp code
+
+class Shape {
+public:
+    virtual void draw() = 0; // Pure virtual function
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {
+        cout << "Drawing a circle." << endl;
+    }
+};
+
+Polymorphism in C++ provides flexibility and extensibility in designing 
+software by allowing different implementations of functions or operations 
+based on the context or types involved.
