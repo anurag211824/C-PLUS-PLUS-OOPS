@@ -1,0 +1,14 @@
+Abstraction refers to the process of hiding the internal implementation details of a class while providing a simplified interface for the user. Encapsulation, on the other hand, involves bundling the data (attributes) and methods (functions) that operate on the data into a single unit, known as a class, and controlling access to that unit through access specifiers.
+
+
+In this example:
+
+Abstraction: The user interacts with the BankAccount class through a simplified interface of functions (deposit, withdraw, displayBalance). The internal details of how the balance is managed and account operations are implemented are hidden from the user.
+
+Encapsulation: The BankAccount class encapsulates the data (account number and balance) and methods (deposit, withdraw, displayBalance) into a single unit. The data members (accountNumber and balance) are private, meaning they cannot be accessed directly from outside the class. Access to these members is controlled through public member functions.
+Together, abstraction and encapsulation provide a way to manage complexity, improve code readability, and enhance code maintainability in object-oriented programming.
+
+
+
+
+
